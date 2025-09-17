@@ -1,29 +1,52 @@
 {
   "compilerOptions": {
-    // Environment setup & latest features
-    "lib": ["ESNext"],
+    // Target modern JavaScript environments
     "target": "ESNext",
-    "module": "Preserve",
-    "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
+    "lib": ["ESNext", "DOM"],
 
-    // Bundler mode
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    // Module system and resolution
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // JSX support for React
+    "jsx": "react-jsx",
+
+    // TypeScript extensions and bundler compatibility
+    "allowImportingTsExtensions": false, // Disabled for compatibility with emit
     "verbatimModuleSyntax": true,
+
+    // Emit settings (no emit at root, handled by individual packages)
     "noEmit": true,
 
-    // Best practices
+    // Strict type-checking options
     "strict": true,
     "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    // Some stricter flags (disabled by default)
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
-  }
+    // Enable incremental builds for performance
+    "incremental": true,
+    "composite": true,
+
+    // Paths and baseUrl for monorepo structure
+    "baseUrl": ".",
+    "paths": {
+      "@cipher-auth/*": ["packages/*/src"]
+    }
+  },
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
 }

@@ -4,9 +4,10 @@ This monorepo contains official SDKs for interacting with the Cipher Authenticat
 
 ## Available Packages
 
-| Package | Description | Version |
-|---------|-------------|---------|
-| [@cipher-auth/server](./packages/server) | Server-side SDK for Cipher Authentication | [![npm](https://img.shields.io/npm/v/@cipher-auth/server.svg)](https://www.npmjs.com/package/@cipher-auth/server) |
+| Package                                  | Description                                       | Version                                                                                                           |
+| ---------------------------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [@cipher-auth/server](./packages/server) | Server-side SDK for Cipher Authentication         | [![npm](https://img.shields.io/npm/v/@cipher-auth/server.svg)](https://www.npmjs.com/package/@cipher-auth/server) |
+| [@cipher-auth/next](./packages/next)     | Next.js integration with Server Component support | [![npm](https://img.shields.io/npm/v/@cipher-auth/next.svg)](https://www.npmjs.com/package/@cipher-auth/next)     |
 
 ## Documentation
 

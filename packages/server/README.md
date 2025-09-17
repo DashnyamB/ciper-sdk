@@ -26,7 +26,7 @@ import { CiperClient } from '@cipher-auth/server';
 // Initialize the client
 const client = new CiperClient(
   'https://your-auth-service-url.com',
-  'your-api-key'
+  'your-api-key',
 );
 
 // Get current user information
@@ -72,6 +72,7 @@ Fetches information about the currently authenticated user.
   - `accessToken`: The user's access token
 
 - **Returns:** Promise resolving to a `CurrentUser` object
+
   ```typescript
   interface CurrentUser {
     id: string;
@@ -88,6 +89,7 @@ Fetches information about the currently authenticated user.
 ## Error Handling
 
 The SDK methods throw errors when:
+
 - The network request fails
 - The authentication token is invalid
 - The API key is invalid
