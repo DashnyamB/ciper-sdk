@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/DashnyamB/ciper-sdk/compare/v1.0.0...v1.1.0) (2025-09-17)
+
+
+### Features
+
+* test ([ed87d0d](https://github.com/DashnyamB/ciper-sdk/commit/ed87d0d5dca4d253602a1ecf564bc4d8dbf1f47e))
+
 # 1.0.0 (2025-09-17)
 
 
