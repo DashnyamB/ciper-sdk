@@ -1,0 +1,21 @@
+{
+  "name": "cipher-auth-sdks",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/bun": "1.2.22",
+    "typescript": "5.9.2"
+  },
+  "description": "SDKs for Cipher Authentication Service",
+  "packageManager": "bun@1.0.0",
+  "scripts": {
+    "dev": "bun run --parallel dev --filter \"*\"",
+    "build": "bun run build --filter \"*\"",
+    "test": "bun run test --filter \"*\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "turbo": "2.5.6"
+  }
+}
