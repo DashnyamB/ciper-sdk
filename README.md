@@ -1,15 +1,40 @@
-# ciper-auth-sdks
+# Cipher Authentication SDKs
 
-To install dependencies:
+This monorepo contains official SDKs for interacting with the Cipher Authentication Service.
+
+## Available Packages
+
+| Package | Description | Version |
+|---------|-------------|---------|
+| [@cipher-auth/server](./packages/server) | Server-side SDK for Cipher Authentication | [![npm](https://img.shields.io/npm/v/@cipher-auth/server.svg)](https://www.npmjs.com/package/@cipher-auth/server) |
+
+## Documentation
+
+- [@cipher-auth/server documentation](./packages/server/README.md)
+
+## Development
+
+This repository uses Bun as the package manager. To get started:
 
 ```bash
+# Clone the repository
+git clone https://github.com/DashnyamB/ciper-sdk.git
+cd ciper-sdk
+
+# Install dependencies
 bun install
+
+# Build all packages
+bun run build
+
+# Run tests
+bun run test
 ```
 
-To run:
+## Contributing
 
-```bash
-bun run index.ts
-```
+We welcome contributions! Please feel free to submit a Pull Request.
 
-This project was created using `bun init` in bun v1.2.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## License
+
+This project is licensed under the MIT License.
