@@ -18,17 +18,4 @@ export class CiperClient {
 
     return (await user.json()) as CurrentUser;
   }
-
-  async permissions(accessToken: string, roleId: string): Promise<string[]> {
-    const permissions = await fetch(
-      `${this.authServiceUrl}/roles/${roleId}/permissions`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      }
-    );
-
-    return (await permissions.json()) as string[];
-  }
 }
