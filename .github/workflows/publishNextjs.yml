@@ -1,4 +1,4 @@
-name: Publish Next.js Package
+name: Publish NextJS Package
 
 on:
   push:
