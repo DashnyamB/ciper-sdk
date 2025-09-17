@@ -4,22 +4,12 @@ module.exports = {
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
-    [
-      '@semantic-release/npm',
-      {
-        npmPublish: true,
-      },
-    ],
-    [
-      '@semantic-release/github',
-      {
-        assets: [{ path: 'dist/*.tgz', label: 'NPM Package' }],
-      },
-    ],
+    '@semantic-release/npm',
+    '@semantic-release/github',
     [
       '@semantic-release/git',
       {
-        assets: ['CHANGELOG.md', 'package.json'],
+        assets: ['package.json', 'CHANGELOG.md'],
         message:
           'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
