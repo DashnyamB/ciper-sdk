@@ -99,7 +99,6 @@ export class NextCiperClient extends CiperClient {
         cookiesList.getAll().map((cookie) => [cookie.name, cookie.value]),
       ),
     });
-    
     TokenStorage.clearTokens();
   }
 }
