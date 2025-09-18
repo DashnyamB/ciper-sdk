@@ -15,5 +15,6 @@ export function createClient(
   if (!globalClient) {
     globalClient = new NextCiperClient(authServiceUrl, apiKey);
   }
+  
   return globalClient;
 }
