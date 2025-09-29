@@ -4,6 +4,8 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "jsx": "react-jsx",
+    "declaration": true,
+    "emitDeclarationOnly": false,
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "target": "es6",

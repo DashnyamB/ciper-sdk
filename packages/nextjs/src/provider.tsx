@@ -52,7 +52,6 @@ export function useCiper() {
 }
 
 export function useAuth() {
-  
   const client = useCiper();
   const [user, setUser] = useState<CurrentUser | null>(null);
   const [loading, setLoading] = useState(true);

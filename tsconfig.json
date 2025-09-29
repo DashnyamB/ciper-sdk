@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     // Target modern JavaScript environments
-    "target": "ESNext",
-    "lib": ["ESNext", "DOM"],
+    "target": "es2020",
+    "lib": ["es2020", "DOM"],
 
     // Module system and resolution
-    "module": "ESNext",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "moduleDetection": "force",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -20,7 +19,8 @@
     "verbatimModuleSyntax": true,
 
     // Emit settings (no emit at root, handled by individual packages)
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
 
     // Strict type-checking options
     "strict": true,
