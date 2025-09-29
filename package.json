@@ -10,7 +10,9 @@
   "packageManager": "bun@1.0.0",
   "scripts": {
     "dev": "bun run --parallel dev --filter \"*\"",
-    "build": "bun run build --filter \"*\"",
+    "build": "bun run build:nextjs && bun run build:server",
+    "build:nextjs": "cd packages/nextjs && bun run build",
+    "build:server": "cd packages/server && bun run build",
     "test": "bun run test --filter \"*\"",
     "format:fix": "prettier --write ."
   },

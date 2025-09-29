@@ -33,7 +33,20 @@ jobs:
         run: node scripts/resolve-workspace-deps.js
 
       - name: Build
-        run: bun run build
+        run: |
+          bun run build:nextjs
+          ls -la packages/nextjs/dist/
+
+      - name: Setup npm
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          npm config set access public
+
+      - name: Verify package contents
+        working-directory: ./packages/nextjs
+        run: |
+          echo "Package contents that will be published:"
+          npm pack --dry-run
 
       - name: Release
         env:

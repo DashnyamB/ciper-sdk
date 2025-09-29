@@ -9,11 +9,12 @@
     "semantic-release": "semantic-release"
   },
   "files": [
-    "dist",
+    "dist/**/*",
     "README.md"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "next": ">=13",

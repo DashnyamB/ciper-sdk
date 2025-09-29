@@ -1,0 +1,24 @@
+# Sourcesrc/
+src
+tsconfig.json
+release.config.js
+
+# Tests
+__tests__
+*.test.ts
+*.test.tsx
+
+# Development
+.gitignore
+.eslintrc*
+.prettier*
+
+# Build artifacts
+*.tsbuildinfo
+
+# Dependencies
+node_modules
+
+# Do NOT ignore
+!dist/
+!README.md
