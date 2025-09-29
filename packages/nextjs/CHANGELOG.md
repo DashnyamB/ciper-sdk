@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/DashnyamB/ciper-sdk/compare/v1.2.4...v1.2.5) (2025-09-29)
+
+
+### Bug Fixes
+
+* trigger ([1aa22f8](https://github.com/DashnyamB/ciper-sdk/commit/1aa22f835ce92730a122b50ede74015a1381606c))
+
 ## [1.2.4](https://github.com/DashnyamB/ciper-sdk/compare/v1.2.3...v1.2.4) (2025-09-29)
 
 
