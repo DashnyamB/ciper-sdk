@@ -1,9 +1,10 @@
 ## [1.1.1](https://github.com/DashnyamB/ciper-sdk/compare/v1.1.0...v1.1.1) (2025-09-17)
 
+
 ### Bug Fixes
 
-- return role permission inside user object ([92cc745](https://github.com/DashnyamB/ciper-sdk/commit/92cc7456b461ed47f4677ee9af89ae1e4f4347f8))
-- return role permission inside user object ([7b43d50](https://github.com/DashnyamB/ciper-sdk/commit/7b43d506f4e9aa955091373d14d6efbbad658ce7))
+* return role permission inside user object ([92cc745](https://github.com/DashnyamB/ciper-sdk/commit/92cc7456b461ed47f4677ee9af89ae1e4f4347f8))
+* return role permission inside user object ([7b43d50](https://github.com/DashnyamB/ciper-sdk/commit/7b43d506f4e9aa955091373d14d6efbbad658ce7))
 
 # [1.1.0](https://github.com/DashnyamB/ciper-sdk/compare/v1.0.0...v1.1.0) (2025-09-17)
 

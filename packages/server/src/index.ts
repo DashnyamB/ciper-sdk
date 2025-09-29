@@ -11,8 +11,6 @@ import type {
 export * from './types';
 
 export class CiperClient {
-  private privateApiKey: string = process.env.CIPER_PRIVATE_API_KEY || '';
-
   constructor(
     protected authServiceUrl: string,
     protected apiKey: string,
@@ -40,7 +38,7 @@ export class CiperClient {
     const response = await fetch(`${this.authServiceUrl}/users/me`, {
       headers: {
         Authorization: `Bearer ${token}`,
-        'x-api-key': this.apiKey,
+        'X-API-Key': this.apiKey,
       },
     });
 
@@ -60,7 +58,7 @@ export class CiperClient {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': this.privateApiKey,
+        'X-API-Key': this.apiKey,
       },
       body: JSON.stringify(params),
     });
@@ -78,7 +76,7 @@ export class CiperClient {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': this.privateApiKey,
+        'X-API-Key': this.apiKey,
       },
       body: JSON.stringify(params),
     });
@@ -96,7 +94,7 @@ export class CiperClient {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': this.privateApiKey,
+        'X-API-Key': this.apiKey,
       },
       body: JSON.stringify({ refreshToken }),
     });
@@ -126,3 +124,5 @@ export class CiperClient {
     }
   }
 }
+
+// module.exports = { CiperClient };
