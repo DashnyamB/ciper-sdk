@@ -1,7 +1,7 @@
 'use client';
 
 import { headers, cookies } from 'next/headers';
-import { CiperClient } from '@cipher-auth/server';
+import { CiperClient } from './base';
 import type {
   CurrentUser,
   SignUpParams,
@@ -9,7 +9,7 @@ import type {
   SignUpResult,
   SignInResult,
   TokenResponse,
-} from '@cipher-auth/server';
+} from './base';
 import { TokenStorage } from './token-storage';
 
 export class NextCiperClient extends CiperClient {

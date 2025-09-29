@@ -12,7 +12,7 @@ import type {
   CurrentUser,
   SignUpParams,
   SignInParams,
-} from '@cipher-auth/server/src/types';
+} from './base';
 
 interface CiperContextValue {
   client: NextCiperClient;
@@ -21,11 +21,23 @@ interface CiperContextValue {
 const CiperContext = createContext<CiperContextValue | undefined>(undefined);
 
 export interface CiperProviderProps {
-  client: NextCiperClient;
   children: ReactNode;
 }
 
-export function CiperProvider({ client, children }: CiperProviderProps) {
+export function CiperProvider({ children }: CiperProviderProps) {
+  if (
+    !process.env.NEXT_PUBLIC_CIPHER_AUTH_URL ||
+    !process.env.NEXT_PUBLIC_CIPHER_API_KEY
+  ) {
+    throw new Error(
+      'NEXT_PUBLIC_CIPHER_AUTH_URL and NEXT_PUBLIC_CIPHER_API_KEY must be set in your environment variables',
+    );
+  }
+
+  const client = new NextCiperClient(
+    process.env.NEXT_PUBLIC_CIPHER_AUTH_URL,
+    process.env.NEXT_PUBLIC_CIPHER_API_KEY,
+  );
   return (
     <CiperContext.Provider value={{ client }}>{children}</CiperContext.Provider>
   );
