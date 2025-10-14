@@ -1,52 +1,19 @@
 {
   "compilerOptions": {
-    // Target modern JavaScript environments
-    "target": "es2020",
-    "lib": ["es2020", "DOM"],
-
-    // Module system and resolution
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-
-    // JSX support for React
-    "jsx": "react-jsx",
-
-    // TypeScript extensions and bundler compatibility
-    "allowImportingTsExtensions": false, // Disabled for compatibility with emit
-    "verbatimModuleSyntax": true,
-
-    // Emit settings (no emit at root, handled by individual packages)
-    "noEmit": false,
+    "target": "ES2020",
+    "module": "CommonJS",
+    "lib": ["ES2020", "DOM"],
     "declaration": true,
-
-    // Strict type-checking options
+    "outDir": "dist",
+    "rootDir": "src",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-
-    // Enable incremental builds for performance
-    "incremental": true,
-    "composite": true,
-
-    // Paths and baseUrl for monorepo structure
-    "baseUrl": ".",
-    "paths": {
-      "@cipher-auth/*": ["packages/*/src"]
-    }
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["packages/**/*"],
-  "exclude": ["node_modules", "dist", "build"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test", "**/*.test.ts"]
 }

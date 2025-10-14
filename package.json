@@ -1,25 +1,15 @@
 {
-  "name": "cipher-auth-sdks",
-  "version": "1.0.0",
+  "name": "root",
   "devDependencies": {
-    "@types/bun": "1.2.22",
+    "lerna": "^9.0.0",
     "prettier": "3.6.2",
     "typescript": "5.9.2"
   },
   "description": "SDKs for Cipher Authentication Service",
-  "packageManager": "bun@1.0.0",
   "scripts": {
-    "dev": "bun run --parallel dev --filter \"*\"",
-    "build": "bun run build:nextjs && bun run build:server",
-    "build:nextjs": "cd packages/nextjs && bun run build",
-    "build:server": "cd packages/server && bun run build",
-    "test": "bun run test --filter \"*\"",
     "format:fix": "prettier --write ."
   },
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {
-    "turbo": "2.5.6"
-  }
+  ]
 }
