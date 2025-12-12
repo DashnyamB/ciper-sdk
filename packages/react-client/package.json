@@ -18,13 +18,19 @@
     "url": "git+https://github.com/DashnyamB/ciper-sdk.git"
   },
   "scripts": {
-    "test": "node ./__tests__/react.test.js"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
-    "react": "19.2.0",
-    "@ciper-auth/core": "file:../core"
+    "@ciper-auth/core": "file:../core",
+    "react": "19.2.0"
   },
   "devDependencies": {
-    "@types/react": "19.2.2"
+    "@types/react": "19.2.2",
+    "@vitejs/plugin-react": "5.0.4",
+    "typescript": "5.9.3",
+    "vite": "7.1.12"
   }
 }

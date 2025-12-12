@@ -7,6 +7,9 @@
   },
   "description": "SDKs for Cipher Authentication Service",
   "scripts": {
+    "build": "lerna run build",
+    "dev": "lerna run dev --parallel",
+    "clean": "lerna run clean",
     "format:fix": "prettier --write ."
   },
   "workspaces": [

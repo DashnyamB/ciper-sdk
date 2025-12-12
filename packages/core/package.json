@@ -18,6 +18,11 @@
     "url": "git+https://github.com/DashnyamB/ciper-sdk.git"
   },
   "scripts": {
-    "test": "node ./__tests__/core.test.js"
+    "test": "node ./__tests__/core.test.js",
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
   }
 }

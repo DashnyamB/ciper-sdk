@@ -1,4 +1,4 @@
-import { CiperUser } from './types';
+import { CiperAuthenticateResponse, CiperRefreshTokenResponse } from './types';
 
 export class CiperClient {
   private publicApiKey: string;
@@ -9,13 +9,36 @@ export class CiperClient {
     this.baseUrl = baseUrl;
   }
 
+  async signUp({
+    email,
+    password,
+  }: {
+    email: string;
+    password: string;
+  }): Promise<CiperAuthenticateResponse> {
+    const response = await fetch(`${this.baseUrl}/auth/signup`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': this.publicApiKey,
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+
+    return response.json();
+  }
+
   async signIn({
     email,
     password,
   }: {
     email: string;
     password: string;
-  }): Promise<CiperUser> {
+  }): Promise<CiperAuthenticateResponse> {
     const response = await fetch(`${this.baseUrl}/auth/signin`, {
       method: 'POST',
       headers: {
@@ -49,7 +72,11 @@ export class CiperClient {
     return response.json();
   }
 
-  async refreshToken({ token }: { token: string }) {
+  async refreshToken({
+    token,
+  }: {
+    token: string;
+  }): Promise<CiperRefreshTokenResponse> {
     const response = await fetch(`${this.baseUrl}/auth/refresh`, {
       method: 'POST',
       headers: {
